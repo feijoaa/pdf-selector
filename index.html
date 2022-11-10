@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <title>PDF Selector - Excel parser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+</head>
+<body >
+    <div class="header">
+        <a href="#default" class="logo">[PDF] Parser</a>
+        <div class="header-right">
+            <a class="active" href="#home">Workspace</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+
+    <div class="container" >
+        <div class="tooler">
+            <div class="_tooler_topbar">
+                <b> Upload Your files </b><br>
+                <label for="excel">Excel:</label>
+                <input type="file" name="excel" id="">
+                <label for="pdf">PDF:</label>
+                <input type="file" name="pdf" id="">
+                <button class="button-47 ">Generate</button>
+
+            </div>
+            <hr>
+            <div class="_tooler_midbar" style="display: none;">
+                <form name="addCord">
+                    
+                  
+                    <!-- <input type="text"
+                           name = "title"
+                           id="title"
+                           class = "form-control"
+                           placeholder="Title"
+                           /> -->
+                           <br>
+                    <input type="text"
+                           name = "body"
+                           id="body"
+                           class = "form-control"
+                           placeholder="Coordinates..."
+                           />
+                           <br>
+                           <button type="button" id="fontsize">
+                            OK
+                           </button>
+                    <button type="submit" id="add" > ADD </button>
+                    <button type="button" id="save" disabled > Save </button>
+                    <button type="button" id="delay" onclick="clearFunction()" > Clear </button>
+                </form>
+            </div>
+            <div class="_tooler_downbar " >     
+                <div class="cords-list-section" style="display: none;">
+                    <ul class="cords-list">
+
+                    </ul>
+                </div>           
+                <div>
+                    <b> Font Size </b>
+                    <form action="" name = "fontform">
+                        <input id="font-scroller" type="text"  value="15">
+                        <button class="button-47">OK</button>
+                    </form>                   
+                </div>
+            </div>
+            <hr>
+            <div class="_tooler_download">
+                <button type="submit" id= 'downloadJson' class="button-47 ">Download Json</button>
+                <a href="" id="downloadAnchorElem"></a>
+            </div>            
+        </div>
+
+        <div class="workspace" >
+            <div class="wrap">
+                <div id="test" style="position: relative;">
+                    <p> 
+                    <span id="offx"></span>
+                    <span id="offy"></span>
+                    </p>
+                    <canvas id="the-canvas" style="border: 1px solid black; z-index: 0;">
+                    </canvas>
+                </div>
+                <div class="pagination">
+                    <button id="prev" class="button-47 ">Previous</button>
+                    &nbsp; &nbsp;
+                    <span>Page: <b><span id="page_num"></span> / <span id="page_count"></span></b></span>
+                    &nbsp; &nbsp;
+                    <button id="next" class="button-47 ">Next </button>
+                </div>
+            </div>            
+        </div>
+        
+        
+    <!-- workspace with PDF pages and canva -->
+    </div>
+</body>
+</html>
+<script src="scriptcopy.js"></script>
+<script src="pdfscript.js"></script>   
