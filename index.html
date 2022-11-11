@@ -24,25 +24,21 @@
     <div class="container" >
         <div class="tooler">
             <div class="_tooler_topbar">
-                <b> Upload Your files </b><br>
-                <label for="excel">Excel:</label>
-                <input type="file" name="excel" id="">
-                <label for="pdf">PDF:</label>
-                <input type="file" name="pdf" id="">
-                <button class="button-47 ">Generate</button>
+                <form action="" id="fileUploader">
+                    <b> Upload Your files </b><br>
+                    <label for="excel">Excel:</label>
+                    <input type="file" name="excel" id="" accept="/.xlsx">
+                    <label for="pdf">PDF:</label>
+                    <input type="file" name="pdf" id="">
+                    <button class="button-47 ">Generate</button>
+                </form>
+                
 
             </div>
             <hr>
             <div class="_tooler_midbar" style="display: none;">
                 <form name="addCord">
-                    
-                  
-                    <!-- <input type="text"
-                           name = "title"
-                           id="title"
-                           class = "form-control"
-                           placeholder="Title"
-                           /> -->
+                 
                            <br>
                     <input type="text"
                            name = "body"

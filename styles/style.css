@@ -3,10 +3,6 @@
 }
 
 body{
-    /* display: flex; */
-    
-    /* text-align: center;
-    align-items: center; */
     justify-content: center;
     background-color:rgba(26, 26, 26, 0.9);
     color:aliceblue;
